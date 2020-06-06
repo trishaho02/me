@@ -2,6 +2,6 @@
 *                                      *
 *   Python and requests are working!   *
 *                                      *
-*    All hail his goodly appendage!    *
+*    All hail his noodly appendage!    *
 *                                      *
 ****************************************
