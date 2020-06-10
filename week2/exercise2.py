@@ -13,7 +13,7 @@ def getLetter(index):
     return alphabet(index)
 
 
-def week2exersise2():
+def week2exercise2():
     indices = [1, 2, 26, 7, 0, 12, 8, 4, 17]
     wordArray = map(getLetter, indices)
     wordArray[0] = wordArray[0].upper()
@@ -24,5 +24,5 @@ def week2exersise2():
     return secret_word
 
 
-if __name__ == "__main__":
+if __name__ = = "__main__":
     print(week2exersise2())
