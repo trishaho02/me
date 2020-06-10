@@ -22,6 +22,7 @@ for x in some_words:
     print(x) # it printed "?"
 
 print(some_words)
+#I think this will print ['what', 'does', 'this', 'line', 'do', '?']
 
 if len(some_words) > 3:
     print('some_words contains more than 3 words')
