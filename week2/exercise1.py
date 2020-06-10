@@ -14,10 +14,12 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 some_words = ['what', 'does', 'this', 'line', 'do', '?']
 
 for word in some_words:
-    print(word)
-
+    #I think this will print the words in the string. 
+    print(word) # it printed  "what"
+    
 for x in some_words:
-    print(x)
+    #I think this will print "?" because there's no value/
+    print(x) # it printed "?"
 
 print(some_words)
 
