@@ -131,12 +131,18 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    numList = []
+    numberList = []
     row = []
 
     current = 0
     for i in range(10):
-        row.append(str(num))
+        numberList.append(str(number))
+
+    for j in range(10):
+        row.append(rows)
+        number == number + 1
+
+    return numberList
 
 
 def loops_4():
@@ -156,18 +162,18 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    numberList = []
-    row = []
+    list2 = []
+    for x in range(10):
+        list1 =  []
+        for y in range(10):
+            list1.append(str(x))
+         list2.append(list1)
 
-    num = 0
-    for i in range(10):
-        row.append(str(num))
-        num = num + 1
+    return list2
 
-    for j in range(10):
-        numberList.append(row)
+    
+        
 
-    return row
 
 
 def loops_5():
