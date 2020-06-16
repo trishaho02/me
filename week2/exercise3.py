@@ -131,18 +131,16 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    numberList = []
-    row = []
+    list2 = []
 
-    current = 0
-    for i in range(10):
-        numberList.append(str(number))
+    for x in range(10):
+        list1 = []
 
-    for j in range(10):
-        row.append(rows)
-        number == number + 1
+        for y in range(10):
+            list1.append(str(x))
+        list2.append(list1)
 
-    return numberList
+    return list2
 
 
 def loops_4():
@@ -163,18 +161,8 @@ def loops_4():
     ]
     """
     list2 = []
-    for x in range(10):
-        list1 =  []
-        for y in range(10):
-            list1.append(str(x))
-         list2.append(list1)
 
-    return list2
-
-    
-        
-
-
+    for x in range(10)
 
 def loops_5():
     """Make the coordinates of the block.
@@ -223,6 +211,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
+    
     return None
 
 
