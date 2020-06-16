@@ -161,11 +161,14 @@ def loops_4():
     ]
     """
     number_field = []
+
     for x in range(10):
         row = []
+
         for y in range(10):
             row.append(str(y))
         number_field.append(row)
+        
     return number_field
 
 def loops_5():
