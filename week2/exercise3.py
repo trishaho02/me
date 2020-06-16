@@ -131,16 +131,16 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    list2 = []
+    list = []
 
     for x in range(10):
         list1 = []
 
         for y in range(10):
             list1.append(str(x))
-        list2.append(list1)
+        list.append(list1)
 
-    return list2
+    return list
 
 
 def loops_4():
@@ -160,9 +160,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    list2 = []
-
-    for x in range(10)
+    number_field = []
+    for x in range(10):
+        row = []
+        for y in range(10):
+            row.append(str(y))
+        number_field.append(row)
+    return number_field
 
 def loops_5():
     """Make the coordinates of the block.
@@ -188,7 +192,17 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    
+    lista = []
+    for a in range(10):
+        listb = []
+        for aa in range(5):
+            listb.append("(" + "i" + str(a) + "," + " " + "j" + str(aa) + ")")
+        lista.append(listb)
+    return lista 
+            
+
+
 
 
 def loops_6():
@@ -212,7 +226,15 @@ def loops_6():
     TIP: look out for the starting condition.
     """
     
-    return None
+    wedge = []
+     
+    for i in range(10):
+        across = []
+        for j in range (i + 1):
+            across.append(str(j))
+        wedge.append(across)
+
+    return wedge 
 
 
 def loops_7():
@@ -236,8 +258,17 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
-
+    row = []
+    for i in range(1, 6): 
+        column = []
+        for ii in range(0, 5 - i):
+            column.append(" ")
+        for ii in range(6 - i, ((5 - i + 1) + 2 * i) - 1):
+            column.append("*")
+        for ii in range(((5 - i + 1) + 2 * i), 11):
+            column.append(" ")
+        row.append(column)
+    return row 
 
 def lp(some_kind_of_list, exercise_name):
     """Help to see what's going on.

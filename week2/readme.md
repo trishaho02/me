@@ -1,2 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-The loops section was the most challenging as I had to experiment a lot with different codes until I tested the correct one. These exercises allowed me to see the different types of coding and its basics. 
+The loops section was the most challenging as I had to experiment with a lot of different methods and codes until I tested the correct one. These exercises allowed myself to see the different types of scripts. 
