@@ -26,13 +26,15 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
+    return range(start, stop, step)
+
     the_numbers = []
-    for x in range(1)
     x = start 
     while x < stop: 
-        print(x) * 2
-        x = x * 2 + step 
+        print(x)
+        x = x + step 
     return the_numbers
+
 
         
 def two_step_ranger(start, stop):
@@ -41,12 +43,12 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    def two_step_ranger(start, stop, step=2):
-        if step = 2:
-            start, stop, step = 2
-        
-    while 
-
+    two_step_ranger = []
+    while start < stop:
+        two_step_ranger.append(start)
+        start = start + 2
+    return two_step_ranger
+    
 
 
 
@@ -60,20 +62,24 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
+    import random
+    number = random.randint(low, high)
+    guesses = False 
+
     
-    stubborn_number = int(input('Enter a number between low and high'))
-    while not (low < stubborn_number < high):
+    
+    while not guesses:
+        stubborn_number = int(input('Enter a number between low and high'))
+        if stubborn_number == number:
+            print("You got it!")
+            guesses = True
 
-    if stubborn_number < low: 
-        print ('Try a higher number')
+        if stubborn_number < low: 
+            print('Try a higher number')
 
-    if stubborn_number > high:
-        print ("Try a lower number")
-
-    if stubborn_number > low and stubborn_number < high: 
-        print ("Try again")
-        return stubborn_number
-    stubborn_number = int(input("Enter a number between low and high"))
+        if stubborn_number > high:
+            print("Try a lower number")
+           
 
     return stubborn_number
 
@@ -87,12 +93,20 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
     message = "Enter a number only"
+    #while True:
+    #number = input('Enter a number: ')
 
-    number = input('Enter a number: ')
-    while not number.isdigit():
-        number = input(message)
+    # try:
+    #     number = int(number)
 
-    return number
+    # except ValueError:
+    #     continue
+    # return number 
+
+    #while not number.isdigit():
+    #   number = input(message)
+
+    return #number
 
     
 
@@ -110,21 +124,21 @@ def super_asker(low, high):
     not_number_rejector()
     Wrong = False 
 
-    Combine = input("What number is between low and high?")
-    while Wrong != True:
-        while not Combine.isdigit():
-            Combine = input("Try again")
-            return Combine 
+    # Combine = input("What number is between low and high?")
+    # while Wrong != True:
+    #     while not Combine.isdigit():
+    #         Combine = input("Try again")
+    #         return Combine 
 
-            while not (low < Combine < high):
-                if Combine < low:
-                    print ("Try higher")
-                if Combine > high:
-                    print ("Try lower")
-                if Combine > low and Combine < high:
-                    Wrong = True 
+    #         while not (low < Combine < high):
+    #             if Combine < low:
+    #                 print ("Try higher")
+    #             if Combine > high:
+    #                 print ("Try lower")
+    #             if Combine > low and Combine < high:
+    #                 Wrong = True 
                     
-                    return Combine 
+    #                 return Combine 
 
 
    
