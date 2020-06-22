@@ -26,6 +26,21 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
+    import random
+
+    guesses = 0
+
+    print("Welcome to the guessing game!")
+    print("Enter a number between _ and _")
+
+    while True:
+      lower_bound = input("Enter a upperBound: ")
+      
+
+    
+    number = random.radint(10, 20)
+
+
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
