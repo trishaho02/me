@@ -30,12 +30,52 @@ def advancedGuessingGame():
 
     guesses = 0
 
-    print("Welcome to the guessing game!")
+    print("\nWelcome to the guessing game!")
     print("Enter a number between _ and _")
 
     while True:
-      lower_bound = input("Enter a upperBound: ")
+      lowerBound = input("Enter a lower bound: "):
+      if type(lowerBound) != int:
+      while not lowerBound.isdigit():
+      if guessNumber != actualNumber:
+        print ("Not a number, enter a integer"):
+        guess = False
       
+      if guessedNumber == actualNumber:
+        print ("Good job. It was {} ". format(actualNumber))
+        guess = True 
+
+      elif guessedNumber < actualNumber:
+        print("Too small, try again :'(")
+      else: 
+        print("Too big, try again :'(")
+      
+      return "You got it!"
+
+      upperBound = input("Enter a upper bound: "):
+      while not upperBound.isdigit():
+      if guessNumber != actualNumber:
+        print ("Not a number, enter a integer"):
+        guess = False 
+
+      if guessedNumber == actualNumber:
+        print ("Good job. It was {} ". format(actualNumber))
+        guess = True 
+
+      elif guessedNumber < actualNumber:
+        print("Too small, try again :'(")
+      else:
+        print("Too big, try again :'(")
+
+      return "You got it!"
+
+
+
+
+
+
+
+
 
     
     number = random.radint(10, 20)
