@@ -27,7 +27,7 @@ def lone_ranger(start, stop, step):
     Look up the docs for range() and wrap it in a 1:1 way
     """
     the_numbers = []
-    for x in range()
+    for x in range(1)
     x = start 
     while x < stop: 
         print(x) * 2
@@ -35,9 +35,6 @@ def lone_ranger(start, stop, step):
     return the_numbers
 
         
-
-
-
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
 
@@ -64,9 +61,22 @@ def stubborn_asker(low, high):
     Look up the docs for input
     """
     
-    stubborn_asker = input('Input a number between low and high')
-    reply = None
-    while reply = low < stubborn_asker < high 
+    stubborn_number = int(input('Enter a number between low and high'))
+    while not (low < stubborn_number < high):
+
+    if stubborn_number < low: 
+        print ('Try a higher number')
+
+    if stubborn_number > high:
+        print ("Try a lower number")
+
+    if stubborn_number > low and stubborn_number < high: 
+        print ("Try again")
+        return stubborn_number
+    stubborn_number = int(input("Enter a number between low and high"))
+
+    return stubborn_number
+
 
 
 def not_number_rejector(message):
@@ -76,8 +86,14 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    not_number_rejector = input('Input a number until actually given one')
-    reply = None 
+    message = "Enter a number only"
+
+    number = input('Enter a number: ')
+    while not number.isdigit():
+        number = input(message)
+
+    return number
+
     
 
 
@@ -89,8 +105,29 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    
+    message = ("Type a number: ")
+    not_number_rejector()
+    Wrong = False 
 
+    Combine = input("What number is between low and high?")
+    while Wrong != True:
+        while not Combine.isdigit():
+            Combine = input("Try again")
+            return Combine 
+
+            while not (low < Combine < high):
+                if Combine < low:
+                    print ("Try higher")
+                if Combine > high:
+                    print ("Try lower")
+                if Combine > low and Combine < high:
+                    Wrong = True 
+                    
+                    return Combine 
+
+
+   
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
