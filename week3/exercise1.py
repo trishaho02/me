@@ -27,7 +27,11 @@ def lone_ranger(start, stop, step):
     Look up the docs for range() and wrap it in a 1:1 way
     """
     
-    return range(start, stop, step)
+    numbers = []
+    while start < stop:
+        numbers.append(start)
+        start = start + step
+    return numbers
 
 
         
@@ -62,7 +66,7 @@ def stubborn_asker(low, high):
     guesses = False 
 
     while not guesses:
-        stubborn_number = int(input('Enter a number between {low} and {high}'))
+        stubborn_number = input(f'Enter a number between {low} and {high}')
         if stubborn_number == number:
             print("You got it!")
             guesses = True
@@ -81,11 +85,10 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    not_number_rejector = int(input("Enter a number: "))
+    not_number_rejector = input("Enter a number: ")
     while not not_number_rejector.isdigit():
-        not_number_rejector = input(message)
-    
-    return not_number_rejector
+        not_number_rejector = input("Try again. Enter a number:")
+        return not_number_rejector
 
 
 
@@ -100,26 +103,7 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    
-    message = ("Type a number: ")
-    not_number_rejector()
-    Wrong = False 
 
-    # Combine = input("What number is between low and high?")
-    # while Wrong != True:
-    #     while not Combine.isdigit():
-    #         Combine = input("Try again")
-    #         return Combine 
-
-    #         while not (low < Combine < high):
-    #             if Combine < low:
-    #                 print ("Try higher")
-    #             if Combine > high:
-    #                 print ("Try lower")
-    #             if Combine > low and Combine < high:
-    #                 Wrong = True 
-                    
-    #                 return Combine 
 
 
    
