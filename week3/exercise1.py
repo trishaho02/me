@@ -81,13 +81,12 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    message = 
-
     not_number_rejector = int(input("Enter a number: "))
     while not not_number_rejector.isdigit():
         not_number_rejector = input(message)
     
     return not_number_rejector
+
 
 
     
