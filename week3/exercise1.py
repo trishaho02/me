@@ -26,14 +26,8 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
+    
     return range(start, stop, step)
-
-    the_numbers = []
-    x = start 
-    while x < stop: 
-        print(x)
-        x = x + step 
-    return the_numbers
 
 
         
@@ -62,27 +56,22 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
+
     import random
     number = random.randint(low, high)
     guesses = False 
 
-    
-    
     while not guesses:
-        stubborn_number = int(input('Enter a number between low and high'))
+        stubborn_number = int(input('Enter a number between {low} and {high}'))
         if stubborn_number == number:
             print("You got it!")
             guesses = True
-
-        if stubborn_number < low: 
-            print('Try a higher number')
-
-        if stubborn_number > high:
-            print("Try a lower number")
-           
+        elif stubborn_number >= number: 
+            print('Try a lower number')
+        elif stubborn_number <= high:
+            print("Try a higher number")
 
     return stubborn_number
-
 
 
 def not_number_rejector(message):
@@ -92,21 +81,14 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    message = "Enter a number only"
-    #while True:
-    #number = input('Enter a number: ')
+    '''
+    not_number_rejector = input("What number is between low and high?")
+    while not not_number_rejector.isdigit():
+        not_number_rejector = input(message)
+    
+    return not_number_rejector
+    '''
 
-    # try:
-    #     number = int(number)
-
-    # except ValueError:
-    #     continue
-    # return number 
-
-    #while not number.isdigit():
-    #   number = input(message)
-
-    return #number
 
     
 
