@@ -34,53 +34,41 @@ def advancedGuessingGame():
     print("Enter a number between _ and _")
 
     while True:
-      lowerBound = input("Enter a lower bound: "):
+      lowerBound = input("Enter a lower bound: ")
       if type(lowerBound) != int:
-      while not lowerBound.isdigit():
-      if guessNumber != actualNumber:
-        print ("Not a number, enter a integer"):
-        guess = False
-      
-      if guessedNumber == actualNumber:
-        print ("Good job. It was {} ". format(actualNumber))
-        guess = True 
-
-      elif guessedNumber < actualNumber:
-        print("Too small, try again :'(")
-      else: 
-        print("Too big, try again :'(")
-      
-      return "You got it!"
-
-      upperBound = input("Enter a upper bound: "):
-      while not upperBound.isdigit():
-      if guessNumber != actualNumber:
-        print ("Not a number, enter a integer"):
-        guess = False 
-
-      if guessedNumber == actualNumber:
-        print ("Good job. It was {} ". format(actualNumber))
-        guess = True 
-
-      elif guessedNumber < actualNumber:
-        print("Too small, try again :'(")
+        print("Please enter an integer")
       else:
-        print("Too big, try again :'(")
+        break 
+      while True:
+        upperBound = input("Enter a upper bound: ")
+        if type(upperBound) != int:
+          print("Please enter an integer")
+        else:
+          break
 
-      return "You got it!"
+      print("Ok then, a number between {}".format(lowerBound))
+      lowerBound = int(lowerBound)
+      print("and {}".format(upperBound))
 
+      actualNumber = random.randint(lowerBound, upperBound)
 
+      guessed = False
 
-
-
-
-
-
-
-    
-    number = random.radint(10, 20)
-
-
+      while not guessed: 
+        try:
+          guessedNumber = int(input("Guess a number: "))
+          print("You guessed {},".format(guessedNumber),)
+          if guessedNumber == actualNumber:
+            print("It was {}".format(actualNumber))
+            guessed = True 
+          if guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+          if guessedNumber > actualNumber:
+            print("Too big, try again :'(")
+          if guessedNumber > upperBound or guessedNumber < lowerBound:
+            print("Your number is outside the given range.")
+        except:
+          print("Please enter an integer")
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
