@@ -30,6 +30,7 @@ def advancedGuessingGame():
 
     guesses = 0
 
+    
     print("\nWelcome to the guessing game!")
     print("Enter a number between _ and _")
 
