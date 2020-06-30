@@ -36,16 +36,21 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    dude = data["results"][0]
+    return {
+        "lastName": dude["name"]["last"],
+        "password": dude["login"]["password"], 
+        "postcodePlusID": dude["location"]["postcode"] + int(dude["id"]["value"])
+        }
 
+
+    
 
 def wordy_pyramid():
     """Make a pyramid out of real words.
-
     There is a random word generator here:
-    http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength=10&maxLength=10&limit=1
-    The arguments that the generator takes is the minLength and maxLength of the word
-    as well as the limit, which is the the number of words. 
+    https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20
+    The generator takes a single argument, length (`wordlength`) of the word.
     Visit the above link as an example.
     Use this and the requests library to make a word pyramid. The shortest
     words they have are 3 letters long and the longest are 20. The pyramid
@@ -72,10 +77,23 @@ def wordy_pyramid():
     "Nereis",
     "Leto",
     ]
-    TIP: to add an argument to a URL, use: ?argName=argVal e.g. &minLength=
+    TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
-    pass
+    wordy_pyramid = []
+    i = 3
+    for i in range(3, 20, 2): 
+        response = requests.get(f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}")
+        print(response.text)
+        wordy_pyramid.append(response.text)
 
+    for i in range(20, 2, -2):
+        response = requests.get(f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}")
+        print(response.text)
+        wordy_pyramid.append(response.text)
+        
+    return wordy_pyramid
+        
+        
 
 def pokedex(low=1, high=5):
     """ Return the name, height and weight of the tallest pokemon in the range low to high.
@@ -91,13 +109,42 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    template = "https://pokeapi.co/api/v2/pokemon/{id}"
+    template = "https://pokeapi.co/api/v2/pokemon/{id}" # is this the url?
 
     url = template.format(id=5)
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
-    return {"name": None, "weight": None, "height": None}
+
+
+    for i in range(low, high)
+    pokedex_name = the_json["name"]
+    pokedex_height = the_json["height"]
+    pokedex_weight = the_json["weight"]
+
+    while first_pokedox:
+        first_pokedex < input()
+        first_pokedex < next_pokedox
+        pokedox_height 
+    
+    while pokedox:
+        first_pokedox < next_pokedox
+
+    while pokedox:
+        first_pokedox < next_pokedox
+
+    pokedox.sort()
+
+    
+    return {
+        "name": name,
+         "weight": weight, 
+         "height": height
+         }
+
+
+
+
 
 
 def diarist():
