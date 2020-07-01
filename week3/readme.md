@@ -9,3 +9,35 @@ For exercise 1:
 - for stubborn_asker - fix the last statement for the code 
 
 For exercise 3: 
+- need to fix the guessing game and how to end it 
+
+For exercise 4: 
+- redo the code 
+- plan below 
+ # mid = middle_range 
+
+    # guess the number between -50 and 20 
+
+    print("Guess the number I am thinking of!")
+    print("It is between {} and {}")
+
+    print("Take a guess")
+    guess = input()
+    guess = int(guess)
+
+    # first split the range into half to make guess more efficient 
+
+    if high >= low:
+        mid = (high + low) // 2
+
+    # while guess is actual_number 
+
+    if arr[mid] == actual_number: 
+        return mid 
+
+    elif arr[mid] > actual_number:
+        print("Try a smaller number")
+        return {low, high, mid - 1, actual_number}
+
+    else arr[mid] < actual_number:
+

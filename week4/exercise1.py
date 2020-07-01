@@ -110,37 +110,24 @@ def pokedex(low=1, high=5):
          variable and then future access will be easier.
     """
     template = "https://pokeapi.co/api/v2/pokemon/{id}" # is this the url?
-
+    
+    pokemons = []
     url = template.format(id=5)
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
+        pokemons.append(the_json)
 
 
-    for i in range(low, high)
+    for x in range(low, high)
     pokedex_name = the_json["name"]
     pokedex_height = the_json["height"]
     pokedex_weight = the_json["weight"]
 
-    while first_pokedox:
-        first_pokedex < input()
-        first_pokedex < next_pokedox
-        pokedox_height 
-    
-    while pokedox:
-        first_pokedox < next_pokedox
-
-    while pokedox:
-        first_pokedox < next_pokedox
-
-    pokedox.sort()
+    for y in pokemons
 
     
-    return {
-        "name": name,
-         "weight": weight, 
-         "height": height
-         }
+    return {"name": name, "weight": weight, "height": height}
 
 
 

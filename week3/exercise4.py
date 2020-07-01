@@ -26,6 +26,10 @@ def binary_search(low, high, actual_number):
     guess = 0 
     tries = 0
 
+    actual_number = []
+
+   
+
     
     return {"guess": guess, "tries": tries}
 

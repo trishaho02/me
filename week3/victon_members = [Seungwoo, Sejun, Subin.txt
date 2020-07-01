@@ -1,0 +1,6 @@
+victon_members = [Seungwoo, Sejun, Subin]
+their_age = [94, 97, 99]
+
+victon_members.append(Seungsik)
+print(victon_members.index(Subin))
+print(victon_members.append(Byungchan))
