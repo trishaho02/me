@@ -25,6 +25,8 @@ def binary_search(low, high, actual_number):
     """
     guess = 0 
     tries = 0
+    # actual_number = the result 
+    # guess between the numbers 
 
     while True:
         guess = (low + high) // 2

@@ -43,9 +43,6 @@ def get_some_details():
         "postcodePlusID": dude["location"]["postcode"] + int(dude["id"]["value"])
         }
 
-
-    
-
 def wordy_pyramid():
     """Make a pyramid out of real words.
     There is a random word generator here:
@@ -112,26 +109,22 @@ def pokedex(low=1, high=5):
     template = "https://pokeapi.co/api/v2/pokemon/{id}" # is this the url?
     
     pokemons = []
+    for x in range(low, high):
     url = template.format(id=5)
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
         pokemons.append(the_json)
-
-
-    for x in range(low, high)
-    pokedex_name = the_json["name"]
-    pokedex_height = the_json["height"]
-    pokedex_weight = the_json["weight"]
-
-    for y in pokemons
-
     
-    return {"name": name, "weight": weight, "height": height}
-
-
-
-
+    for y in pokemons:
+        height = y["height"]
+        if height > tallest_pokemon:
+            tallest_pokemon = height 
+            first_name = y["name"]
+            first_weight = y["weight"]
+            first_height = y["height"]
+    
+    return {"name": first_name, "weight": first_weight, "height": first_height}
 
 
 def diarist():
