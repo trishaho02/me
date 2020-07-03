@@ -27,6 +27,24 @@ For exercise 4:
 
     # first split the range into half to make guess more efficient 
 
+for exercise 4: 
+test a number
+# actual_number = the result 
+    # guess between the numbers 
+
+    while True:
+        guess = (low + high) // 2
+        print(guess)
+
+        if (guess < actual_number):
+            low = guess + 1
+
+        elif (guess > actual_number):
+            high = guess - 1
+
+        elif (guess == actual_number):
+            return {"guess": guess, "tries": tries}
+2. second try 
     if high >= low:
         mid = (high + low) // 2
 
