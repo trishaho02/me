@@ -23,5 +23,23 @@ for pokedex:
     # for low and high pokemons 
     # has victreebel, blastois, golduck, ivysaur 
 
-hello = [] - means
+notes from: 
+-
+
+attempt:
+pokemons = [] # to array the pokemons - use range and list out items 
+    for x in range(low, high):
+    url = template.format(id=5)
+    r = requests.get(url)
+    if r.status_code is 200:
+        the_json = json.loads(r.text)
+        pokemons.append(the_json)
+    
+    for y in pokemons:
+        height = y["height"]
+        if height > tallest_pokemon:
+            tallest_pokemon = height 
+            first_name = y["name"]
+            first_weight = y["weight"]
+            first_height = y["height"]
 
