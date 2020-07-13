@@ -106,12 +106,12 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    template = "https://pokeapi.co/api/v2/pokemon/{id}" # is this the url?
+    template = "https://pokeapi.co/api/v2/pokemon/{id}" 
     
     pokemons = []
     for x in range(low, high):
-    url = template.format(id=5)
-    r = requests.get(url)
+        url = template.format(id=5)
+        r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
         pokemons.append(the_json)
@@ -141,7 +141,21 @@ def diarist():
          the test will have nothing to look at.
     TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
-    pass
+    filepath = LOCAL + "/Trispokedovetiles(laser).gcode"
+    go_enter = 'r'
+    lasers = open(filepath, go_enter)
+    laserscount = 0 
+    for line in lasers:
+        if "M10 P1" in line:
+            laserscount += 1
+    print(laserscount)
+
+    writefilepaths = LOCAL + "/lasers.pew" #the number
+    go_write = 'w'
+    lasers = open(writefilepaths, go_write)
+    lasers.write(str(laserscount))
+    lasers.close()
+
 
 
 if __name__ == "__main__":
