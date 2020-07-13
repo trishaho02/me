@@ -103,6 +103,19 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
+    message = f"Give me a number bewteen {low} and {high}"
+
+    while True:
+        try:
+            they_input = low < int(input(message)) < high 
+            if they_input == False:
+            print("Wrong!")
+            
+        else:
+            return they_input
+        except ValueError:
+            print("Wrong!")
+
     
 
 
