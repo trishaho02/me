@@ -45,7 +45,7 @@ pokemons = [] # to array the pokemons - use range and list out items
 
 for diarist: 
 - M10 P1 = 19
-- Trispokedovetiles(laser).gcode:
+- Trispokedovetiles(laser).gcode: #collect the M10 P1 
 > counted the number of times the laser is turned on and off 
 
 filepath # the file = LOCAL + "/Trispokedovetiles(laser).gcode"
