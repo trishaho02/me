@@ -25,6 +25,18 @@ For exercise 4:
     guess = input()
     guess = int(guess)
 
+    asking_question = (f"Give me a number between {low} and {high}")
+    while True:
+        try:
+            input = low < int(input(message)) < high
+            if input == False:
+                print("Wrong, try again")
+            
+            else: 
+                return input 
+        except ValueError:
+            print("Wrong, try again")
+
     # first split the range into half to make guess more efficient 
 
 for exercise 4: 
@@ -46,7 +58,7 @@ test a number
             return {"guess": guess, "tries": tries}
 2. second try 
     if high >= low:
-        mid = (high + low) // 2
+        mid = (high + low) // 2 (middle range)
 
     # while guess is actual_number 
 
