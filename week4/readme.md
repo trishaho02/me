@@ -62,3 +62,7 @@ filepath # the file = LOCAL + "/Trispokedovetiles(laser).gcode"
     lasers = open(writefilepaths, go_write)
     lasers.write(str(laserscount))
     lasers.close()
+
+    ERROR PROBLEMS 
+    IndentationError: expected an indented block < this happened and i wasnt sure what it was >
+    > now i know: had to fix some indents from the codes as in add spaces and ident PROPERRLLY 
