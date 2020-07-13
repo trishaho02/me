@@ -43,3 +43,22 @@ pokemons = [] # to array the pokemons - use range and list out items
             first_weight = y["weight"]
             first_height = y["height"]
 
+for diarist: 
+- M10 P1 = 19
+- Trispokedovetiles(laser).gcode:
+> counted the number of times the laser is turned on and off 
+
+filepath # the file = LOCAL + "/Trispokedovetiles(laser).gcode"
+    go_enter = 'r'
+    lasers = open(filepath, go_enter) #allow access so open it 
+    laserscount = 0 #from the beginning  
+    for line in lasers:
+        if "M10 P1" in line:
+            laserscount += 1
+    print(laserscount)
+
+    writefilepaths = LOCAL + "/lasers.pew" #the number
+    go_write = 'w'#any letter 
+    lasers = open(writefilepaths, go_write)
+    lasers.write(str(laserscount))
+    lasers.close()
