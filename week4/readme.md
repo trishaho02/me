@@ -24,8 +24,6 @@ for pokedex:
     # has victreebel, blastois, golduck, ivysaur 
 
 notes from: 
--
-
 attempt:
 pokemons = [] # to array the pokemons - use range and list out items 
     for x in range(low, high):
