@@ -91,6 +91,16 @@ def abba(source="abba", guard=3):
     aobaobbbabbaoaaobbbaoaaobaobaobbba
                 and so on...
     """
+    part = source.split(" ")
+    results = list(map(apply_rules, part))
+    newstring = " ".join(results)
+    guard -= 1
+    if guard > 0:
+        return apply_rules(newstring, guard)
+    else:
+        return newstring
+
+
     def apply_rules(letter, guard):
         """Control the substitution.
 
@@ -159,6 +169,21 @@ def square_koch(t, order, size):
 
 def draw_square(steps=4):
     """Helper function to make testing easier."""
+    #drawing square from turtle
+    
+    draw_koch = turtle
+
+    #steps 
+
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+
     return draw_koch(drawing_method=square_koch, steps_deep=steps)
 
 
