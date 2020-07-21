@@ -40,11 +40,11 @@ def advancedGuessingGame():
         print("Please enter an integer")
       else:
         break 
-      while True:
+    while True:
         upperBound = input("Enter a upper bound: ")
-        if type(upperBound) != int:
+      if type(upperBound) != int:
           print("Please enter an integer")
-        else:
+      else:
           break
 
       print("Ok then, a number between {}".format(lowerBound))
@@ -55,10 +55,10 @@ def advancedGuessingGame():
 
       guessed = False
 
-      while not guessed: 
-        try:
-          guessedNumber = int(input("Guess a number: "))
-          print("You guessed {},".format(guessedNumber),)
+    while not guessed: 
+      try:
+        guessedNumber = int(input("Guess a number: "))
+        print("You guessed {},".format(guessedNumber),)
           if guessedNumber == actualNumber:
             print("It was {}".format(actualNumber))
             guessed = True 
