@@ -41,9 +41,9 @@ def advancedGuessingGame():
       else:
         break 
     while True:
-        upperBound = input("Enter a upper bound: ")
+      upperBound = input("Enter a upper bound: ")
       if type(upperBound) != int:
-          print("Please enter an integer")
+        print("Please enter an integer")
       else:
           break
 
@@ -59,17 +59,17 @@ def advancedGuessingGame():
       try:
         guessedNumber = int(input("Guess a number: "))
         print("You guessed {},".format(guessedNumber),)
-          if guessedNumber == actualNumber:
-            print("It was {}".format(actualNumber))
-            guessed = True 
-          if guessedNumber < actualNumber:
-            print("Too small, try again :'(")
-          if guessedNumber > actualNumber:
-            print("Too big, try again :'(")
-          if guessedNumber > upperBound or guessedNumber < lowerBound:
-            print("Your number is outside the given range.")
-        except:
-          print("Please enter an integer")
+        if guessedNumber == actualNumber:
+          print("It was {}".format(actualNumber))
+          guessed = True 
+        if guessedNumber < actualNumber:
+          print("Too small, try again :'(")
+        if guessedNumber > actualNumber:
+          print("Too big, try again :'(")
+        if guessedNumber > upperBound or guessedNumber < lowerBound:
+          print("Your number is outside the given range.")
+      except:
+        print("Please enter an integer")
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
