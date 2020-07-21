@@ -45,15 +45,15 @@ def advancedGuessingGame():
       if type(upperBound) != int:
         print("Please enter an integer")
       else:
-          break
+        break
 
-      print("Ok then, a number between {}".format(lowerBound))
-      lowerBound = int(lowerBound)
-      print("and {}".format(upperBound))
+    print("Ok then, a number between {}".format(lowerBound))
+    lowerBound = int(lowerBound)
+    print("and {}".format(upperBound))
 
-      actualNumber = random.randint(lowerBound, upperBound)
+    actualNumber = random.randint(lowerBound, upperBound)
 
-      guessed = False
+    guessed = False
 
     while not guessed: 
       try:
