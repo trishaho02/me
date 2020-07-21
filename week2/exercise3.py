@@ -105,7 +105,7 @@ def loops_2():
             rows.append("*");
     
     for j in range(10):
-            starfield.append(rows)
+            starfield.append(rows) #same thing above 
 
     return starfield
 
@@ -165,8 +165,8 @@ def loops_4():
     for x in range(10):
         row = []
 
-        for y in range(10):
-            row.append(str(y))
+    for y in range(10):
+        row.append(str(y))
         number_field.append(row)
         
     return number_field
@@ -199,8 +199,8 @@ def loops_5():
     lista = []
     for a in range(10):
         listb = []
-        for aa in range(5):
-            listb.append("(" + "i" + str(a) + "," + " " + "j" + str(aa) + ")")
+    for aa in range(5):
+        listb.append("(" + "i" + str(a) + "," + " " + "j" + str(aa) + ")")
         lista.append(listb)
     return lista 
             
