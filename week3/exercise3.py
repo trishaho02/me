@@ -36,7 +36,7 @@ def advancedGuessingGame():
         print("Please enter an integer")
       else:
         break 
-
+    
     while True:
       upperBound = input("Enter a upper bound: ")
       if type(upperBound) != int:
@@ -55,7 +55,7 @@ def advancedGuessingGame():
     while not guessed: 
       try:
         guessedNumber = int(input("Guess a number: "))
-        print("You guessed {},".format(guessedNumber))
+        print("You guessed {},".format(guessedNumber),)
         
         if guessedNumber == actualNumber:
           print("It was {}".format(actualNumber))
