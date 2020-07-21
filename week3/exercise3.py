@@ -25,12 +25,8 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    guessesTaken = 0
 
-    import random
-
-    guesses = 0
-
-    
     print("\nWelcome to the guessing game!")
     print("Enter a number between _ and _")
 
@@ -40,6 +36,7 @@ def advancedGuessingGame():
         print("Please enter an integer")
       else:
         break 
+
     while True:
       upperBound = input("Enter a upper bound: ")
       if type(upperBound) != int:
@@ -58,7 +55,8 @@ def advancedGuessingGame():
     while not guessed: 
       try:
         guessedNumber = int(input("Guess a number: "))
-        print("You guessed {},".format(guessedNumber),)
+        print("You guessed {},".format(guessedNumber))
+        
         if guessedNumber == actualNumber:
           print("It was {}".format(actualNumber))
           guessed = True 

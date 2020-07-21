@@ -109,12 +109,11 @@ def super_asker(low, high):
         try:
             they_input = low < int(input(message)) < high 
             if they_input == False:
-            print("Wrong!")
-            
+                print("Wrong!")
         else:
             return they_input
         except ValueError:
-            print("Wrong!")
+        print("Wrong!")
 
     
 
