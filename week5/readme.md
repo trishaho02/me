@@ -8,11 +8,16 @@ print(message)
 
 text # 2
 countdown_messages = []
-    for i in range(9, 0, -1):
+    for I in range(9, 0, -1):
         print("Getting ready to start in" + str(i))
     print("Let's go!")
 
     return countdown_messages
+
+for i in range(9, 0, -1):
+  print("Get ready to start in" + " " + str(i))
+  
+print("Let's go")
 
 - maybe try a loop backwards - so start at whatever number and add a -() 
 for it to loop backwards (countdown)
@@ -32,13 +37,21 @@ def do_bunch_of_bad_things():
     print("Getting ready to start in 1")
     print("Let's go!")
 
+        import time
+    
+    for i in range(9, 0, -1):
+        print("Get ready to start in" + " " + str(i))
+        time.sleep(1)
+        
+    print("Let's go!")
+
 > for triangle section: 
 def calculate_hypotenuse(base, height):
 - trial #1 
     number = 
     triangle = {"base": 3, "height": 4}
     triangle_hypo = [0]**2 + [1]**2
-    [maybe try to make triange["__"] simpler]
+    [maybe try to make triangle["__"] simpler]
 
 
 def calculate_area(base, height):
