@@ -106,15 +106,12 @@ def super_asker(low, high):
     message = f"Give me a number bewteen {low} and {high}"
 
     while True:
-        try:
-            they_input = low < int(input(message)) < high 
-            if they_input == False:
-                print("Wrong!")
-        else:
-            return they_input
-        except ValueError:
-        print("Wrong!")
+        answer = not_number_rejector("Give me a number between" + str(low) + " " and " " + str(high) + ":")
+        if low <= answer <= high:
+            return answer
 
+        else:
+            print("Try again, it is not in the range")
     
 
 
