@@ -103,7 +103,6 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    message = f"Give me a number bewteen {low} and {high}"
 
     while True:
         answer = not_number_rejector("Give me a number between" + str(low) + " " and " " + str(high) + ":")
