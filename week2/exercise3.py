@@ -197,6 +197,7 @@ def loops_5():
     """
     
     lista = []
+    
     for a in range(10):
         listb = []
     for aa in range(5):
