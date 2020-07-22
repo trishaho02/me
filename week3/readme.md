@@ -8,6 +8,24 @@ For exercise 1:
 - first intro to the guessing game - currently doesn't work 
 - for stubborn_asker - fix the last statement for the code 
 
+stubborn_asker fix
+message = f"Give me a number bewteen {low} and {high}"
+
+    while True:
+        stubborn_asker = int(input(message))
+        if low < stubborn_asker < high:
+            break
+
+    while True:
+        super_asker = not_number_rejector(message)
+        if low < super_asker < high:
+            return super_asker
+
+        else:
+            print("Try again, it is not in the range")
+    
+    return stubborn_asker
+
 For exercise 3: 
 - need to fix the guessing game and how to end it 
 
