@@ -37,11 +37,8 @@ def do_bunch_of_bad_things():
     print("Getting ready to start in 1")
     print("Let's go!")
 
-        import time
-    
     for i in range(9, 0, -1):
         print("Get ready to start in" + " " + str(i))
-        time.sleep(1)
         
     print("Let's go!")
 
@@ -67,3 +64,27 @@ def calculate_perimeter(base, height):
 
 def calculate_aspect(base, height):
     pass
+
+    
+    draw_koch 
+    draw_square = turtle 
+
+    draw_square.forward(50)
+    draw_square.left(90)
+    draw_square.forward(50)
+    draw_square.left(90)
+    draw_square.forward(50)
+    draw_square.left(90)
+    draw_square.forward(50)
+    draw_square.left(90)
+
+    draw_koch = draw_square 
+
+    return draw_koch(drawing_method=square_koch, steps_deep=steps)
+
+    draw_pointy = turtle 
+
+    turtle.left(180)
+    turtle.forward(45)
+    turtle.forward(-45)
+    turtle.right(180)
