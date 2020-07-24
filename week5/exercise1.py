@@ -70,11 +70,11 @@ def calculate_hypotenuse(base, height):
 
 
 def calculate_area(base, height):
-    pass
+    return base * height / 2
 
 
 def calculate_perimeter(base, height):
-    pass
+    base + height + calculate_hypotenuse(base, height)
 
 
 def calculate_aspect(base, height):
@@ -85,8 +85,8 @@ def calculate_aspect(base, height):
 # Don't reinvent the wheel
 def get_triangle_facts(base, height, units="mm"):
     return {
-        "area": None,
-        "perimeter": None,
+        "area": calculate_area(base, height),
+        "perimeter": calculate_perimeter(base, height),
         "height": None,
         "base": None,
         "hypotenuse": None,
