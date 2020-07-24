@@ -42,6 +42,15 @@ def do_bunch_of_bad_things():
         
     print("Let's go!")
 
+    counting = []
+
+    for i in range(start, stop) 
+        print(message, str(i))
+    print(completion_message)
+
+    return counting
+
+
 > for triangle section: 
 def calculate_hypotenuse(base, height):
 - trial #1 
@@ -63,7 +72,18 @@ def calculate_perimeter(base, height):
 
 
 def calculate_aspect(base, height):
-    pass
+    aspect meaning = the ratio of a triangle to the longest edge to the shortest edge 
+    - compare the ratios 
+     if height < base:
+        aspect = "tall"
+    
+    elif base > height:
+        aspect = "wide"
+    
+    else:
+        aspect = "equal"
+
+    return aspect 
 
     
     draw_koch 
