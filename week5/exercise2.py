@@ -164,6 +164,7 @@ def square_koch(t, order, size):
     trace = ""
     # write the rest of the function here.
     return str(order) + trace
+    pass
 
 
 def draw_square(steps=4):
