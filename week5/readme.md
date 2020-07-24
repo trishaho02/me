@@ -65,8 +65,6 @@ def calculate_area(base, height):
     triangle["base"] = 
     
 
-
-
 def calculate_perimeter(base, height):
     pass
 
