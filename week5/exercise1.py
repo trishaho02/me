@@ -202,11 +202,16 @@ def wordy_pyramid(api_key):
 
 
 def get_a_word_of_length_n(length):
-    pass
+    import requests
+    url: "http://api.wordnik.com/v4/words.json/randomWords?"
 
 
 def list_of_words_with_lengths(list_of_lengths):
-    pass
+    pyramid_list = []
+    for i in list_of_lengths:
+        pyramid_list.append(get_a_word_of_length_n(i))
+
+    return pyramid_list
 
 
 if __name__ == "__main__":
