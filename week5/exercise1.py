@@ -49,11 +49,13 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
+    counting = []
 
-    for i in range(9, 0, -1):
-        print("Get ready to start in" + " " + str(i))
-        
-    print("Let's go!")
+    for i in range(start, stop-1, -1):
+        print(message, str(i))
+    print(completion_message)
+
+    return counting
 
 
 # TRIANGLES
@@ -77,7 +79,17 @@ def calculate_perimeter(base, height):
 
 
 def calculate_aspect(base, height):
-    pass #equal, wide and tall
+    #equal, wide and tall
+    if height < base:
+        aspect = 'tall'
+    
+    elif base > height:
+        aspect = 'wide'
+    
+    else:
+        aspect = 'equal'
+
+    return aspect 
 
 
 # Make sure you reuse the functions you've already got
@@ -89,8 +101,8 @@ def get_triangle_facts(base, height, units="mm"):
         "height": height,
         "base": base,
         "hypotenuse": calculate_hypotenuse(base, height),
-        "aspect": None,
-        "units": None,
+        "aspect": calculate_aspect(base, height),
+        "units": units,
     }
 
 
@@ -148,7 +160,7 @@ def triangle_master(base, height, return_diagram=False, return_dictionary=False)
     dictionary_of_triangle_facts = get_triangle_facts(base, height) 
 
     diagram = tell_me_about_this_right_triangle(dictionary_of_triangle_facts) 
-    
+
     if return_diagram and return_dictionary:
         return {"diagram": diagram, "dictionary": dictionary_of_triangle_facts}
     elif return_diagram:
