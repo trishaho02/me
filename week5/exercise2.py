@@ -91,15 +91,6 @@ def abba(source="abba", guard=3):
     aobaobbbabbaoaaobbbaoaaobaobaobbba
                 and so on...
     """
-    part = source.split(" ")
-    results = list(map(apply_rules, part))
-    newstring = " ".join(results)
-    guard -= 1
-    if guard > 0:
-        return apply_rules(newstring, guard)
-    else:
-        return newstring
-
 
     def apply_rules(letter, guard):
         """Control the substitution.
@@ -118,7 +109,18 @@ def abba(source="abba", guard=3):
             return letter
 
     # write the rest of the function here
-    pass
+    parts = source.split(" ")
+    result = list(map(italian_rules, parts))
+    new_string = " ".join(result)
+    guard -= 1
+    if guard > 0:
+        return italian_dinner(new_string, guard)
+    else:
+        return new_string
+    
+
+
+
 
 
 def koch(t, order, size):
@@ -162,7 +164,17 @@ def square_koch(t, order, size):
 
     """
     trace = ""
-    # write the rest of the function here.
+    if order == 0:
+        t.forward(size)
+    else:
+        trace += square_koch(t, order-1, size/3)   # Go 1/3 of the way
+        t.left(90)
+        trace += square_koch(t, order-1, size/3)
+        t.right(90)
+        trace += square_koch(t, order-1, size/3)
+        t.left(90)
+        trace += square_koch(t, order-1, size/3)
+
     return str(order) + trace
 
 
