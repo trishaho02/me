@@ -68,15 +68,16 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
-    return (base ** 2 + height ** 2) ** 1/2
+    hypotenuse = (base ** 2 + height ** 2) ** 1/2
+    return hypotenuse
 
 def calculate_area(base, height):
-    return base * height / 2
-
+    area = base * height / 2
+    return area
 
 def calculate_perimeter(base, height):
-    return base + height + calculate_hypotenuse(base, height)
-
+    perimeter = base + height + calculate_hypotenuse(base, height)
+    return perimeter 
 
 def calculate_aspect(base, height):
     #equal, wide and tall
@@ -207,6 +208,7 @@ def get_a_word_of_length_n(length):
 
 
 def list_of_words_with_lengths(list_of_lengths):
+    import requests
     pyramid_list = []
     for i in list_of_lengths:
         pyramid_list.append(get_a_word_of_length_n(i))
