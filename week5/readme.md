@@ -1,4 +1,6 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+
+WORK AND EXPERIMENTS:
 exercise 1 
 > change parts of the exercise for it to work 
 test # 1
@@ -21,22 +23,6 @@ print("Let's go")
 
 - maybe try a loop backwards - so start at whatever number and add a -() 
 for it to loop backwards (countdown)
- > replace below 
-# This is a terrible function. The rest of the functions in this file do a
-# much better job of what it's trying to do. Once you've has a little look,
-# move on, and eventually delete this function. (And this comment!)
-def do_bunch_of_bad_things():
-    print("Getting ready to start in 9")
-    print("Getting ready to start in 8")
-    print("Getting ready to start in 7")
-    print("Getting ready to start in 6")
-    print("Getting ready to start in 5")
-    print("Getting ready to start in 4")
-    print("Getting ready to start in 3")
-    print("Getting ready to start in 2")
-    print("Getting ready to start in 1")
-    print("Let's go!")
-
     for i in range(9, 0, -1):
         print("Get ready to start in" + " " + str(i))
         
