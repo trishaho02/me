@@ -108,6 +108,15 @@ def abba(source="abba", guard=3):
         else:
             return letter
 
+        """ if letter == "a":
+            return "a"
+        elif letter == "b":
+            return "b"
+        elif letter == "o":
+            return "o"
+        else:
+            return letter """
+
     # write the rest of the function here
     part = source.split(" ")
     result = list(map(apply_rules, part))
@@ -117,10 +126,6 @@ def abba(source="abba", guard=3):
         return apply_rules(new_string, guard)
     else:
         return new_string
-    
-
-
-
 
 
 def koch(t, order, size):
