@@ -177,6 +177,8 @@ def square_koch(t, order, size):
         trace += square_koch(t, order-1, size/3)
         t.right(90)
         trace += square_koch(t, order-1, size/3)
+        t.right(90)
+        trace += square_koch(t, order-1, size/3)
         t.left(90)
         trace += square_koch(t, order-1, size/3)
 
@@ -185,18 +187,11 @@ def square_koch(t, order, size):
 
 def draw_square(steps=4):
     """Helper function to make testing easier."""
-    #drawing square from turtle
-    
-    #draw_koch = turtle
-
-    #steps 
-
     return draw_koch(drawing_method=square_koch, steps_deep=steps)
 
 
 def draw_pointy(steps=4):
     """Helper function to make testing easier."""
-
     return draw_koch(drawing_method=koch, steps_deep=steps)
 
     
