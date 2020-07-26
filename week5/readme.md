@@ -92,3 +92,6 @@ def calculate_aspect(base, height):
     turtle.forward(45)
     turtle.forward(-45)
     turtle.right(180)
+
+REFLECTION and THOUGHTS:
+ 
