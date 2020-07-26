@@ -95,15 +95,19 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    message = f"Give me a number bewteen {low} and {high}"
+    message = "Give me a number between {low} and {high}"
 
-    while True:
-        super_asker = not_number_rejector(message)
-        if low < int("super_asker") < high:
-            return super_asker
+    super_asker = input(message)
 
-        else:
-            print("Try again, it is not in the range")
+    try: 
+        number = int(super_asker) 
+        number > low
+        number < high
+
+    except ValueError: #trying valueerror bc while not true not work :(
+        print("That is not in the range, try a different number!")
+        
+    return super_asker
     
 
 
