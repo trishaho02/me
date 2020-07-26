@@ -99,7 +99,7 @@ def super_asker(low, high):
 
     while True:
         super_asker = not_number_rejector(message)
-        if low < super_asker < high:
+        if low < int("super_asker") < high:
             return super_asker
 
         else:
