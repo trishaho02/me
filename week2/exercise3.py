@@ -101,10 +101,10 @@ def loops_2():
     starfield = []
     rows = []
 
-    for i in range(10):
+    for x in range(10):
             rows.append("*")
     
-    for j in range(10):
+    for y in range(10):
             starfield.append(rows) #same thing above 
 
     return starfield
