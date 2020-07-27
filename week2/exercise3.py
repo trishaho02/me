@@ -135,7 +135,6 @@ def loops_3():
 
     for x in range(10):
         coordinates_row = []
-
         for y in range(10):
             coordinates_row.append(str(x))
         list.append(coordinates_row)
