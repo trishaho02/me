@@ -102,7 +102,7 @@ def loops_2():
     rows = []
 
     for i in range(10):
-            rows.append("*");
+            rows.append("*")
     
     for j in range(10):
             starfield.append(rows) #same thing above 
@@ -196,14 +196,14 @@ def loops_5():
     you'll come to see the pros and cons of each over time.
     """
     
-    lista = []
+    number_square = []
     
-    for a in range(10):
-        listb = []
-    for aa in range(5):
-        listb.append("(" + "i" + str(a) + "," + " " + "j" + str(aa) + ")")
-        lista.append(listb)
-    return lista 
+    for x in range(10):
+        coordinates_row = []
+        for y in range(5):
+            coordinates_row.append("(" + "i" + str(x) + "," + " " + "j" + str(y) + ")")
+        number_square.append(coordinates_row)
+    return number_square 
             
 
 
