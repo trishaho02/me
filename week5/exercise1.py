@@ -222,7 +222,7 @@ def get_a_word_of_length_n(length): # use above
     url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={}"
     URL = url.format(length)
     r = requests.get(URL)
-    if r.status_code is 200:
+    if r.status_code is 200: #when it works 
         get_a_word = r.text
         print(get_a_word)
         return get_a_word
