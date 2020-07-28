@@ -118,12 +118,14 @@ def abba(source="abba", guard=3):
             return letter """
 
     # write the rest of the function here
-    part = source.split(" ")
-    result = list(map(apply_rules, part))
-    new_string = " ".join(result)
+    parts = list(source) 
+    result = []
+    for i in parts:
+        result.append(apply_rules(i, guard))
+    new_string = "".join(result)
     guard -= 1
     if guard > 0:
-        return apply_rules(new_string, guard)
+        return abba(new_string, guard) #dunno why it wont return source instead ?? hm
     else:
         return new_string
 

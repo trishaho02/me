@@ -1,5 +1,11 @@
 TODO: Reflect on what you learned this week and what is still unclear.
 
+SOME NOTES:
+> map() = applies a given function to each item of an iterable and returns a list as a result
+> wordy pyramid exercise in ex1 is similar to the one we did in week4 - collecting words from the web
+> "\n" -  a new line, escaping 
+
+
 WORK AND EXPERIMENTS:
 exercise 1 
 > change parts of the exercise for it to work 
@@ -36,62 +42,9 @@ for it to loop backwards (countdown)
 
     return counting
 
-
-> for triangle section: 
-def calculate_hypotenuse(base, height):
-- trial #1 
-    number = 
-    triangle = {"base": 3, "height": 4}
-    triangle_hypo = [0]**2 + [1]**2
-    [maybe try to make triangle["__"] simpler]
-
-
-def calculate_area(base, height):
-    area = []
-    triangle["base"] = 
-    
-
-def calculate_perimeter(base, height):
-    pass
-
-
-def calculate_aspect(base, height):
-    aspect meaning = the ratio of a triangle to the longest edge to the shortest edge 
-    - compare the ratios 
-     if height < base:
-        aspect = "tall"
-    
-    elif base > height:
-        aspect = "wide"
-    
-    else:
-        aspect = "equal"
-
-    return aspect 
-
-    
-    draw_koch 
-    draw_square = turtle 
-
-    draw_square.forward(50)
-    draw_square.left(90)
-    draw_square.forward(50)
-    draw_square.left(90)
-    draw_square.forward(50)
-    draw_square.left(90)
-    draw_square.forward(50)
-    draw_square.left(90)
-
-    draw_koch = draw_square 
-
-    return draw_koch(drawing_method=square_koch, steps_deep=steps)
-
-    draw_pointy = turtle 
-
-    turtle.left(180)
-    turtle.forward(45)
-    turtle.forward(-45)
-    turtle.right(180)
-
 REFLECTION and THOUGHTS:
+> this week's work was quite decent - as some of the exercises provided a guide for the other exercises
+> the wordy pyramid and after that required A LOT of thinking and brain power as i had to continuously change and adjust codes for 
+tests to run and see what was going on in the tests as well
+> exercise 2 was entertaining to complete, it showed a drawing of the koch which was cool - a lot of reediting though 
  
