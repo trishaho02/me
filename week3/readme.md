@@ -89,3 +89,7 @@ test a number
 
     else arr[mid] < actual_number:
 
+REFLECTION:
+> most challenging and confusing weekly exercises, had to get my head around it and stressed a lot, eventually i got it
+> need to revise further into guessing game exercise 
+
