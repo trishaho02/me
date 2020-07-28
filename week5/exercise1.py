@@ -15,39 +15,43 @@ are on top of it, take these comments out. Others won't have comments and
 you'll need to figure out for yourself what to do.
 """
 
+import math
+import requests
+
 
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
 # move on, and eventually delete this function. (And this comment!)
-def do_bunch_of_bad_things():
-    print("Getting ready to start in 9")
-    print("Getting ready to start in 8")
-    print("Getting ready to start in 7")
-    print("Getting ready to start in 6")
-    print("Getting ready to start in 5")
-    print("Getting ready to start in 4")
-    print("Getting ready to start in 3")
-    print("Getting ready to start in 2")
-    print("Getting ready to start in 1")
-    print("Let's go!")
+# def do_bunch_of_bad_things():
+#     print("Getting ready to start in 9")
+#     print("Getting ready to start in 8")
+#     print("Getting ready to start in 7")
+#     print("Getting ready to start in 6")
+#     print("Getting ready to start in 5")
+#     print("Getting ready to start in 4")
+#     print("Getting ready to start in 3")
+#     print("Getting ready to start in 2")
+#     print("Getting ready to start in 1")
+#     print("Let's go!")
 
-    triangle = {"base": 3, "height": 4}
-    triangle["hypotenuse"] = triangle["base"] ** 2 + triangle["height"] ** 2
-    print("area = " + str((triangle["base"] * triangle["height"]) / 2))
-    print("side lengths are:")
-    print("base: {}".format(triangle["base"]))
-    print("height: {}".format(triangle["height"]))
-    print("hypotenuse: {}".format(triangle["hypotenuse"]))
+#     triangle = {"base": 3, "height": 4}
+#     triangle["hypotenuse"] = triangle["base"] ** 2 + triangle["height"] ** 2
+#     print("area = " + str((triangle["base"] * triangle["height"]) / 2))
+#     print("side lengths are:")
+#     print("base: {}".format(triangle["base"]))
+#     print("height: {}".format(triangle["height"]))
+#     print("hypotenuse: {}".format(triangle["hypotenuse"]))
 
-    another_hyp = 5 ** 2 + 6 ** 2
-    print(another_hyp)
+#     another_hyp = math.sqrt(5 ** 2 + 6 ** 2)
+#     print(another_hyp)
 
-    yet_another_hyp = 40 ** 2 + 30 ** 2
-    print(yet_another_hyp)
+#     yet_another_hyp = math.sqrt(40 ** 2 + 30 ** 2)
+#     print(yet_another_hyp)
 
 
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
+
 def countdown(message, start, stop, completion_message):
     counting = []
 
@@ -69,23 +73,27 @@ def countdown(message, start, stop, completion_message):
 # hand hold quite nicely.
 
 def calculate_hypotenuse(base, height):
-    hypotenuse = (base ** 2 + height ** 2) ** 1/2
-    return hypotenuse
+    """Calculate hypotenuse of a right angle triangle"""
+    hypotenuse = (base ** 2 + height ** 2)
+    return math.sqrt(hypotenuse)
 
 def calculate_area(base, height):
+    """Calculate the area of a triangle"""
     area = (base * height) / 2
     return area
 
 def calculate_perimeter(base, height):
+    """The sum of the base, height and hypotenuse. For right triangles only"""
     perimeter = base + height + calculate_hypotenuse(base, height)
     return perimeter 
 
 def calculate_aspect(base, height):
     #equal, wide and tall
+    aspect = ''
     if height < base:
-        aspect = 'tall'
-    elif base > height:
         aspect = 'wide'
+    elif base < height:
+        aspect = 'tall'
     else:
         aspect = 'equal'
 
@@ -238,7 +246,6 @@ def list_of_words_with_lengths(list_of_lengths): #try map()
 
 
 if __name__ == "__main__":
-    do_bunch_of_bad_things()
     countdown("We're about to start", 9, 1, "we finished, wheeeee!")
     triangle_master(3, 5)
     pyramid = wordy_pyramid()
