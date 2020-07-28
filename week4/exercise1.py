@@ -111,7 +111,7 @@ def pokedex(low=1, high=5):
     for x in range(low, high):
         url = f"https://pokeapi.co/api/v2/pokemon/{x}"
         r = requests.get(url)
-        if r.status_code is 200:
+        if r.status_code is 200: #if successful 
             the_json = r.json()
             pokemons.append(the_json)
 
