@@ -209,6 +209,9 @@ def random_filler_text(number_of_words=200):
     import random
 
     my_dict = make_filler_text_dictionary()
+    # for word in my_dict
+    # do a random length 
+    # use random library - random.radint(0, len(word) - 3) - number of words
 
     return " ".join(words)
 
