@@ -181,7 +181,7 @@ def make_filler_text_dictionary():
     import requests
     #start stop step 
     filler_dictionary = []
-    for i in range(3, 7): #made a range
+    for i in range(3, 7):
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
         r = requests.get(url)
         print(r.text)
