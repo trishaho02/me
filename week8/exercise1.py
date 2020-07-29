@@ -124,9 +124,9 @@ def pet_filter(letter="a"):
             "hedgehog","guppy",]
     # fmt: on
     list_of_pets = []
-    for pet in pets:
-        if pet.find(letter) >=0: 
-            list_of_pets.append(pet)
+    for i in pets:
+        if i.find(letter) >=0: 
+            list_of_pets.append(i)
         else:
             pass
     return list_of_pets
