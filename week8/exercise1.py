@@ -144,8 +144,8 @@ def best_letter_for_pets():
 
 
     the_alphabet = string.ascii_lowercase 
-    for letter_pet in range(len(the_alphabet)): #len of alphabet
-        letter = str(the_alphabet[letter_pet])
+    for letter_pet in range(len(the_alphabet)): #len of alphabet #gotta define popular_letter
+        letter = str(the_alphabet[letter_pet]) 
         best_pets = len(pet_filter(letter))
     # do len() 
 
