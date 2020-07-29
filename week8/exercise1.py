@@ -142,17 +142,11 @@ def best_letter_for_pets():
     """
     import string
 
-    longest_list = -1
 
     the_alphabet = string.ascii_lowercase 
-    for i in range(len(the_alphabet)):
-        letter = str(the_alphabet[i])
+    for letter_pet in range(len(the_alphabet)): #len of alphabet
+        letter = str(the_alphabet[letter_pet])
         best_pets = len(pet_filter(letter))
-        if best_pets > longest_list:
-            best_pets = longest_list
-            popular_letter = the_alphabet[i]
-        else:
-            pass
     # do len() 
 
 
